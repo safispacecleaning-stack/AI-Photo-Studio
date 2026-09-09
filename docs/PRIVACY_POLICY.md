@@ -14,6 +14,6 @@ own permission and picker disclosures. No photo is shared with the developer or 
 third party by the app.
 
 For privacy questions or deletion requests, contact the publisher at
-`REPLACE_WITH_SUPPORT_EMAIL`.
+`micahomwenga06@gmail.com`.
 
 This policy must be hosted at a public HTTPS URL before Play Console submission.

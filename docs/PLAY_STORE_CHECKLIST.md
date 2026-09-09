@@ -2,7 +2,7 @@
 
 ## Before upload
 
-- Replace `REPLACE_WITH_SUPPORT_EMAIL` in the privacy policy and publish it at a public HTTPS URL.
+- Publish the completed privacy policy at a public HTTPS URL.
 - Create a release keystore and keep it outside the repository.
 - Add the release signing properties locally or through CI secrets:
   `RELEASE_STORE_FILE`, `RELEASE_STORE_PASSWORD`, `RELEASE_KEY_ALIAS`, and `RELEASE_KEY_PASSWORD`.
