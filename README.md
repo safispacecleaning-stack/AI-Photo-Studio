@@ -27,7 +27,7 @@ app/src/main/java/com/aiphotostudio/app/
 
 Open the project in Android Studio Ladybug or newer with:
 
-- JDK 17
+- JDK 21
 - Android SDK Platform 35
 - Android SDK Build-Tools 35.x
 - Android Gradle Plugin 8.7.3 (resolved by Gradle)
