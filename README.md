@@ -15,7 +15,7 @@ Enhancement currently runs on-device: the selected image is decoded, adjusted fo
 
 ```text
 app/src/main/java/com/aiphotostudio/app/
-	data/       EnhancementRepository and its replaceable fake implementation
+	data/       EnhancementRepository and the local image processor
 	domain/     EnhancementMode product model
 	ui/         Compose screen and ViewModel state
 	ui/theme/   Material 3 color theme
@@ -35,11 +35,13 @@ Open the project in Android Studio Ladybug or newer with:
 Then run:
 
 ```bash
-gradle :app:assembleDebug
+./gradlew :app:assembleDebug
 ```
 
 The current dev container does not include an Android SDK, so the build command cannot complete there until `ANDROID_HOME` or `local.properties` points to an installed SDK.
 
-## Publication follow-up
+## Play publication
 
-Before Play publication, add a release signing configuration, privacy policy and data-safety declarations, network/API error states, image size and format validation, telemetry consent, and Google Play Billing product configuration.
+The release build uses R8 shrinking and reads signing credentials from Gradle properties, never from source control. See [docs/PLAY_STORE_CHECKLIST.md](docs/PLAY_STORE_CHECKLIST.md) for the remaining publisher-owned steps and [docs/PRIVACY_POLICY.md](docs/PRIVACY_POLICY.md) for the policy that must be hosted at a public HTTPS URL.
+
+The current app is offline and does not require a network permission. It does not include accounts, analytics, ads, or billing.

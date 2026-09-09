@@ -17,7 +17,7 @@ import java.util.UUID
 class LocalEnhancementRepository(private val context: Context) : EnhancementRepository {
     override suspend fun enhance(photoUri: Uri, mode: EnhancementMode): Uri {
         val source = context.contentResolver.openInputStream(photoUri)?.use(BitmapFactory::decodeStream)
-            ?: error("Unable to read the selected photo")
+            ?: error("Unable to decode the selected photo")
         val output = Bitmap.createBitmap(source.width, source.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(output)
         val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {

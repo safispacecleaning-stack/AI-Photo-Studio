@@ -1,0 +1,1 @@
+# Keep this file as the app-specific R8 rules entry point.
