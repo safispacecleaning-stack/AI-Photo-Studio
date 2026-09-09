@@ -102,6 +102,9 @@ fun PhotoStudioScreen(photoStudioViewModel: PhotoStudioViewModel = viewModel()) 
             }
         }
         Text("Your original photo stays private and untouched.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        state.errorMessage?.let { message ->
+            Text(message, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.error)
+        }
     }
 }
 

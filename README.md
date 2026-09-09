@@ -9,7 +9,7 @@ An Android-first photo enhancement app built with Kotlin and Jetpack Compose.
 - Choose Professional, Social Media, or ID Photo enhancement.
 - Run the enhancement flow with the `Enhance with AI` action.
 
-The current repository implementation returns the original image from a fake enhancement service. This keeps the product flow testable while the network contract is being designed.
+Enhancement currently runs on-device: the selected image is decoded, adjusted for the chosen mode, and written to a new JPEG in the app cache. The original image is never overwritten. The repository interface remains the integration point for a future hosted AI service.
 
 ## Project structure
 
